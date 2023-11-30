@@ -1,0 +1,68 @@
+{
+  "name": "crf2",
+  "productName": "Procolombia-RC",
+  "version": "1.0.0",
+  "description": "CRF para el estudio Procolombia-RC",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "mateopineda",
+  "license": "MIT",
+  "dependencies": {
+    "electron-notification": "^1.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "exceljs": "^4.4.0",
+    "fs": "^0.0.1-security",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.1.0",
+    "@electron-forge/maker-deb": "^7.1.0",
+    "@electron-forge/maker-rpm": "^7.1.0",
+    "@electron-forge/maker-squirrel": "^7.1.0",
+    "@electron-forge/maker-zip": "^7.1.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.1.0",
+    "@electron-forge/publisher-github": "^7.1.0",
+    "electron": "^27.1.2"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin",
+            "win32"
+          ],
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "certificateFile": "./cert.pfx",
+            "certificatePassword": "process.env.CERTIFICATE_PASSWORD"
+          }
+        }
+        
+      ],
+      "files": [
+        {
+          "match": [
+            "src/Pacientes.xlsx"
+          ],
+          "options": {
+            "ignore": [
+              "**/__tests__/**"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

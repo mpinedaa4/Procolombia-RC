@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>PROCOLOMBIA RC</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="menu-container">
+      <ul class="tabs">
+        <li class="tab"><a href="#tab1">Sociodemográfico</a></li>
+        <li class="tab"><a href="#tab2">Tumor</a></li>
+        <li class="tab"><a href="#tab3">Biomarcadores</a></li>
+        <li class="tab"><a href="#tab4">Antecedentes</a></li>
+        <li class="tab"><a href="#tab5">Tratamiento Tumor Localizado</a></li>
+        <li class="tab"><a href="#tab6">Tratamiento mHSPC</a></li>
+        <li class="tab"><a href="#tab7">Tratamiento mCRPC</a></li>
+        <li class="tab"><a href="#tab8">nmCRPC</a></li>
+        <li class="tab"><a href="#tab9">Uso de Recursos en Salud 1</a></li>
+        <li class="tab"><a href="#tab10">Uso de Recursos en Salud 2</a></li>
+        <li class="tab"><a href="#tab11">Progresión</a></li>
+        <li class="tab"><a href="#tab12">Estado Vital</a></li>
+        <li class="tab"><a href="#tab13">Información del Sitio</a></li>
+      </ul>
+    </div>
+
+    <form class="form-container" id="main-form">
+      <div class="landing">
+        <h1>Bienvenido</h1>
+        <!--<h1>¡Bienvenido al CRF de PROCOLOMBIA RC!</h1>-->
+        <p>Para iniciar, debes dar click en los botones de la izquierda</p>
+      </div>
+      <div id="tab1" class="tab-content active">
+        <div class="box">
+          <div class="input-pair">
+            <label for="consecutivo">Consecutivo:</label>
+            <input type="number" name="consecutivo" id="consecutivo" value="" inputmode="numeric" required>
+          </div>
+
+          <div class="input-pair">
+            <label for="num_paciente">Número asignado al paciente:</label>
+            <input type="text" name="num_paciente" id="num_paciente">
+          </div>
+          
+          <div class="input-pair">
+            <label for="año_nacimiento">Año de nacimiento:</label>
+            <input type="number" name="año_nacimiento" id="birth_year" min="1900" max="2099">
+          </div>
+
+          <div class="input-pair">
+            <label for="residencia">Área de residencia:</label>
+            <select id="residencia" name="residencia">
+              <option value=""></option>
+              <option value="Rural">Rural</option>
+              <option value="Urbano">Urbano</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+          
+          <div class="input-pair">
+            <label for="departamento">Departamento de residencia:</label>
+            <input type="text" name="departamento" id="departamento">
+          </div>
+            
+          <div class="input-pair">
+            <label for="regimen">Afiliación al sistema de salud:</label>
+            <select id="regimen" name="regimen">
+              <option value=""></option>
+              <option value="Contributivo">Régimen contributivo</option>
+              <option value="Subsidiado">Régimen subsidiado</option>
+              <option value="Especial">Régimen especial</option>
+              <option value="Póliza">Asegurador privado de salud</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab2" class="tab-content">
+        <div class="box">
+          <div class="input-pair">
+            <label for="fecha_dx">Fecha de diagnóstico del cáncer de próstata:</label>
+            <input type="date" name="fecha_dx" id="fecha_dx">
+          </div>
+
+          <div class="input-pair">
+            <label for="deteccion">Método de detección del cáncer de próstata:</label>
+            <select id="deteccion" name="deteccion">
+              <option value=""></option>
+              <option value="Síntomas Urinarios">Síntomas urinarios</option>
+              <option value="Dolor">Dolor</option>
+              <option value="Tamización">Tamización</option>
+              <option value="Otro">Otro</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+          
+          <div class="input-pair">
+            <label for="escenario">Escenario al diagnóstico:</label>
+            <select id="escenario" name="escenario">
+              <option value=""></option>
+              <option value="Ambulatorio">Ambulatorio</option>
+              <option value="Hospitalario">Hospitalario</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div> 
+
+          <div class="input-pair">
+            <label for="estadio">Estadío al diagnóstico:</label>
+            <select id="estadio" name="estadio">
+              <option value=""></option>
+              <option value="I">I</option>
+              <option value="II">II</option>
+              <option value="III">III</option>
+              <option value="IVA">IVA</option>
+              <option value="IVB">IVB</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+          
+          <div class="input-pair">
+            <label for="gleason">Gleason:</label>
+            <select id="gleason" name="gleason">
+              <option value=""></option>
+              <option value="6">6</option>
+              <option value="3+4=7">3+4=7</option>
+              <option value="4+3=7">4+3=7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+
+          <div class="input-pair">
+            <label for="grupo">Grupo según el grado:</label>
+            <select id="grupo" name="grupo">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+          
+          <div class="input-pair">
+            <label for="ipsa">PSA inicial:</label>
+            <input type="number" name="ipsa" id="ipsa" value="" inputmode="numeric">
+          </div>
+          
+          <div class="input-pair">
+            <label for="riesgo">Grupo de riesgo:</label>
+            <select id="riesgo" name="riesgo">
+              <option value=""></option>
+              <option value="Bajo">Bajo</option>
+              <option value="Intermedio">Intermedio</option>
+              <option value="Alto">Alto</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+
+          <div class="input-pair">
+            <label for="fecha_mhspc">Fecha de diagnóstico de mHSPC:</label>
+            <input type="date" name="fecha_mhspc" id="fecha_mhspc">
+          </div>    
+
+          <div class="input-pair">
+            <label for="carga">Carga tumoral en mHSPC:</label>
+            <select id="carga" name="carga">
+              <option value=""></option>
+              <option value="Baja">Baja carga tumoral</option>
+              <option value="Alta">Alta carga tumoral</option>
+              <option value="Desconocido">Desconocido</option>
+              <option value="No aplica">No aplica</option>
+            </select>
+          </div>
+        
+          <div class="input-pair">
+            <label for="psa_prog">PSA al progresar a mCRPC:</label>
+            <input type="number" name="psa_prog" id="psa_prog" value="" inputmode="numeric">
+          </div>
+          
+          <div class="input-pair">
+            <label for="fecha_mcrpc">Fecha de diagnóstico de mCRPC:</label>
+            <input type="date" name="fecha_mcrpc" id="fecha_mcrpc">
+          </div>
+
+          <div class="input-pair">
+            <label for="sitios_metastasis">Sitios de metástasis:</label>
+            <select id="sitios_metastasis" name="sitios_metastasis">
+              <option value=""></option>
+              <option value="Hueso">Hueso</option>
+              <option value="Ganglio">Ganglio linfático</option>
+              <option value="Visceral">Visceral(pulmón/hígado)</option>
+              <option value="Hueso/Visceral">Hueso/visceral</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="input-pair">
+            <label for="ecog">ECOG al diagnóstico de mCRPC:</label>
+            <input type="number" name="ecog" id="ecog" min="0" max="5">
+          </div>
+
+          
+        </div>
+      </div>  
+
+      <div id="tab3" class="tab-content">
+        <div class="box">
+          <div class="radio-group">
+            <label for="biomarcadores" id="lbl-biomarcador">¿Tiene biomarcadores?<span> *</span></label>
+            <div class="radio-options">   
+              <input type="radio" id="biomarcadores1" name="biomarcadores" value="Si" required>
+              <label for="biomarcadores1">Sí</label>    
+              <input type="radio" id="biomarcadores2" name="biomarcadores" value="No" required>
+              <label for="biomarcadores2">No</label>
+            </div>
+          </div>             
+
+          <div class="input-pair" id="input-pair-fecha-biomarcador">
+            <label for="fecha_biomarcador">Fecha de reporte del biomarcador:</label>
+            <input type="date" name="fecha_biomarcador" id="fecha_biomarcador">
+          </div>
+
+          <div class="separador"></div>
+
+          <label id="cuales-tab3">¿Cuáles?</label>
+
+          <div class="biomarker-box" id="biomarker-box">
+            <!--DUDA: EL PTEN, TP53 Y RB1 SON SEPARADOS O VAN JUNTOS?-->
+            <div class="biomarker">
+              <input type="checkbox" id="pten" name="pten" value="Si">
+              <label for="pten" id="pten">PTEN</label>
+              <div class="biomarker-result">
+                <label for="resultado_pten">Resultado:</label>
+                <select id="resultado_pten" name="resultado_pten">
+                  <option value=""></option>
+                  <option value="Mutación">Mutación</option>
+                  <option value="Sin mutación">Sin mutación</option>
+                  <option value="VUS">Variante de significado incierto (VUS)</option>
+                  <option value="No aplica">No aplica</option>
+                  <option value="Desconocido">Desconocido</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="biomarker">
+              <input type="checkbox" id="tp53" name="tp53" value="Si">
+              <label for="tp53">TP53</label>
+              <div class="biomarker-result">
+                <label for="resultado_tp53">Resultado:</label>
+                <select id="resultado_tp53" name="resultado_tp53">
+                  <option value=""></option>
+                  <option value="Mutación">Mutación</option>
+                  <option value="Sin mutación">Sin mutación</option>
+                  <option value="VUS">Variante de significado incierto (VUS)</option>
+                  <option value="No aplica">No aplica</option>
+                  <option value="Desconocido">Desconocido</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="biomarker">
+              <input type="checkbox" id="rb1" name="rb1" value="Si">
+              <label for="rb1">RB1</label>
+              <div class="biomarker-result">
+                <label for="resultado_rb1">Resultado:</label>
+                <select id="resultado_rb1" name="resultado_rb1">
+                  <option value=""></option>
+                  <option value="Mutación">Mutación</option>
+                  <option value="Sin mutación">Sin mutación</option>
+                  <option value="VUS">Variante de significado incierto (VUS)</option>
+                  <option value="No aplica">No aplica</option>
+                  <option value="Desconocido">Desconocido</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="biomarker">
+              <input type="checkbox" id="brca1" name="brca1" value="Si">
+              <label for="brca1">BRCA1</label>
+              <div class="biomarker-result">
+                <label for="resultado_brca1">Resultado:</label>
+                <select id="resultado_brca1" name="resultado_brca1">
+                  <option value=""></option>
+                  <option value="Mutación">Mutación</option>
+                  <option value="Sin mutación">Sin mutación</option>
+                  <option value="VUS">Variante de significado incierto (VUS)</option>
+                  <option value="No aplica">No aplica</option>
+                  <option value="Desconocido">Desconocido</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="biomarker">
+              <input type="checkbox" id="brca2" name="brca2" value="Si">
+              <label for="brca2">BRCA2</label>
+              <div class="biomarker-result">
+                <label for="resultado_brca2">Resultado:</label>
+                <select id="resultado_brca2" name="resultado_brca2">
+                  <option value=""></option>
+                  <option value="Mutación">Mutación</option>
+                  <option value="Sin mutación">Sin mutación</option>
+                  <option value="VUS">Variante de significado incierto (VUS)</option>
+                  <option value="No aplica">No aplica</option>
+                  <option value="Desconocido">Desconocido</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="biomarker">
+              <input type="checkbox" id="mmr" name="mmr" value="Si">
+              <label for="mmr">MMR</label>
+              <div class="biomarker-result">
+                <label for="resultado_mmr">Resultado:</label>
+                <select id="resultado_mmr" name="resultado_mmr">
+                  <option value=""></option>
+                  <option value="Mutación">Mutación</option>
+                  <option value="Sin mutación">Sin mutación</option>
+                  <option value="VUS">Variante de significado incierto (VUS)</option>
+                  <option value="No aplica">No aplica</option>
+                  <option value="Desconocido">Desconocido</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="biomarker">
+              <input type="checkbox" id="msi" name="msi" value="Si">
+              <label for="msi">MSI</label>
+              <div class="biomarker-result">
+                <label for="resultado_msi">Resultado:</label>
+                <select id="resultado_msi" name="resultado_msi">
+                  <option value=""></option>
+                  <option value="Mutación">Mutación</option>
+                  <option value="Sin mutación">Sin mutación</option>
+                  <option value="VUS">Variante de significado incierto (VUS)</option>
+                  <option value="No aplica">No aplica</option>
+                  <option value="Desconocido">Desconocido</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="biomarker">
+              <input type="checkbox" id="otro_biomarcador" name="otro_biomarcador" value="Si">
+              <label for="otro_biomarcador">Otro</label>
+              <div class="biomarker-result">
+                <label for="cual_otro">¿Cuál?</label>
+                <input type="text" name="cual_otro" id="cual_otro">
+              </div>
+            </div>
+
+            <div class="otro">
+              <div class="resultado-otro">
+                <div class="resul-otro">
+                  <label for="resultado_otro">Resultado:</label>
+                </div>
+                <select id="resultado_otro" name="resultado_otro">
+                  <option value=""></option>
+                  <option value="Mutación">Mutación</option>
+                  <option value="Sin mutación">Sin mutación</option>
+                  <option value="VUS">Variante de significado incierto (VUS)</option>
+                  <option value="No aplica">No aplica</option>
+                  <option value="Desconocido">Desconocido</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="tab4" class="tab-content">
+        <div class="box">
+          <div class="radio-group-tab4">
+            <label for="hta">¿Tiene diagnóstico de hipertensión arterial?</label>
+              <div class="radio-options">
+              <input type="radio" id="hta1" name="hta" value="Si">
+              <label for="hta1">Sí</label>
+              <input type="radio" id="hta2" name="hta" value="No">
+              <label for="hta2">No</label>
+              <input type="radio" id="hta3" name="hta" value="Desconocido">
+              <label for="hta3">Desconocido</label>
+            </div>
+          </div>
+
+          <div class="radio-group-tab4">
+            <label for="dm">¿Tiene diagnóstico de diabetes mellitus?</label>
+            <div class="radio-options">
+              <input type="radio" id="dm1" name="dm" value="Si">
+              <label for="dm1">Sí</label>
+              <input type="radio" id="dm2" name="dm" value="No">
+              <label for="dm2">No</label>
+              <input type="radio" id="dm3" name="dm" value="Desconocido">
+              <label for="dm3">Desconocido</label>
+            </div>
+          </div>
+
+          <div class="radio-group-tab4">
+            <label for="coronariopatia">¿Tiene diagnóstico de enfermedad cardíaca isquémica?</label>
+            <div class="radio-options">
+              <input type="radio" id="coronariopatia1" name="coronariopatia" value="Si">
+              <label for="coronariopatia1">Sí</label>
+              <input type="radio" id="coronariopatia2" name="coronariopatia" value="No">
+              <label for="coronariopatia2">No</label>
+              <input type="radio" id="coronariopatia3" name="coronariopatia" value="Desconocido">
+              <label for="coronariopatia3">Desconocido</label>
+            </div>
+          </div>
+
+          <div class="radio-group-tab4">
+            <label for="erc">¿Tiene diagnóstico de enfermedad renal crónica?</label>
+            <div class="radio-options">
+              <input type="radio" id="erc1" name="erc" value="Si">
+              <label for="erc1">Sí</label>
+              <input type="radio" id="erc2" name="erc" value="No">
+              <label for="erc2">No</label>
+              <input type="radio" id="erc3" name="erc" value="Desconocido">
+              <label for="erc3">Desconocido</label>
+            </div>
+          </div>
+
+          <div class="radio-group-tab4">
+            <label for="familiar_pc">¿Tiene antecedente familiar de cáncer de próstata en primer o segundo grado?</label>
+            <div class="radio-options">
+              <input type="radio" id="familiar_pc1" name="familiar_pc" value="Si">
+              <label for="familiar_pc1">Sí</label>
+              <input type="radio" id="familiar_pc2" name="familiar_pc" value="No">
+              <label for="familiar_pc2">No</label>
+              <input type="radio" id="familiar_pc3" name="familiar_pc" value="Desconocido">
+              <label for="familiar_pc3">Desconocido</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab5" class="tab-content">
+        <div class="box">
+          <div class="radio-group">
+            <label for="tumor_localizado">¿El paciente tuvo tratamiento para tumor localizado?<span> *</span></label>
+            <div class="radio-options">
+              <input type="radio" id="tumor_localizado1" name="tumor_localizado" value="Si" required>
+              <label for="tumor_localizado1">Sí</label>
+              <input type="radio" id="tumor_localizado2" name="tumor_localizado" value="No" required>
+              <label for="tumor_localizado2">No</label>
+            </div>
+          </div>
+
+          <div class="tumor-localizado">
+            <div class="input-pair">
+              <label for="fecha_tto1">Fecha de inicio del primer tratamiento sistémico para cáncer de próstata localizado:</label>
+              <input type="date" name="fecha_tto1" id="fecha_tto1">
+            </div>
+
+            <div class="input-pair">
+              <label for="nombre_tto1">Nombre del primer tratamiento sistémico:</label>
+              <input type="text" name="nombre_tto1" id="nombre_tto1">
+            </div>
+
+            <div class="radio-group">
+              <label for="cx">¿El paciente requirió prostatectomía radical?</label>
+              <div class="radio-options">
+                <input type="radio" id="cx1" name="cx" value="Si">
+                <label for="cx1">Sí</label>
+                <input type="radio" id="cx2" name="cx" value="No">
+                <label for="cx2">No</label>
+              </div>
+            </div>
+
+            <div class="radio-group">
+              <label for="rxtx">¿El paciente requirió radioterapia del tumor primario?</label>
+              <div class="radio-options">
+                <input type="radio" id="rxtx1" name="rxtx" value="Si">
+                <label for="rxtx1">Sí</label>
+                <input type="radio" id="rxtx2" name="rxtx" value="No">
+                <label for="rxtx2">No</label>
+              </div>
+            </div>
+
+            <div class="radio-group">
+              <label for="intencion">¿La intención del tratamiento es curativa?</label>
+              <div class="radio-options">
+                <input type="radio" id="intencion1" name="intencion" value="Si">
+                <label for="intencion1">Sí</label>
+                <input type="radio" id="intencion2" name="intencion" value="No">
+                <label for="intencion2">No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div id="tab6" class="tab-content">
+        <div class="box">
+          <div class="radio-group">
+            <label for="mhspc">¿El paciente tuvo tratamiento para mHSPC?<span> *</span></label>
+            <div class="radio-options">
+              <input type="radio" id="mhspc1" name="mhspc" value="Si" required>
+              <label for="mhspc1">Sí</label>
+              <input type="radio" id="mhspc2" name="mhspc" value="No" required>
+              <label for="mhspc2">No</label>
+            </div>
+          </div>
+
+          <div class="mhspc">
+            <div class="input-pair">
+              <label for="fecha_tto_mhspc">Fecha de inicio del primer tratamiento sistémico para mHSPC:</label>
+              <input type="date" name="fecha_tto_mhspc" id="fecha_tto_mhspc">
+            </div>
+
+            <div class="input-pair">
+              <label for="l1_mhspc">Terapia de primera línea para mHSPC:</label>
+              <select id="l1_mhspc" name="l1_mhspc">
+                <option value=""></option>
+                <option value="ADT">ADT (incluyendo orquidectomía)</option>
+                <option value="ADT + Abiraterona">ADT + Abiraterona</option>
+                <option value="ADT + Apalutamida">ADT + Apalutamida</option>
+                <option value="ADT + Docetaxel">ADT + Docetaxel</option>
+                <option value="ADT + Enzalutamida">ADT + Enzalutamida</option>
+                <option value="ADT + Radioterapia">ADT + Radioterapia</option>
+                <option value="ADT + NHT">ADT + Nuevas Terapias Antihormonales (NHT)</option>
+                <option value="NHT + Docetaxel">NHT + Docetaxel</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="input-pair">
+              <label for="medico_mhspc">Médico encargado de administrar la primera línea para mHSPC:</label>
+              <select id="medico_mhspc" name="medico_mhspc">
+                <option value=""></option>
+                <option value="Oncólogo">Oncólogo</option>
+                <option value="Radioterapeuta">Radioterapeuta</option>
+                <option value="Urólogo">Urólogo</option>
+                <option value="Urólogo oncólogo">Urólogo oncólogo</option>
+                <option value="Multidisciplinario">Multidisciplinario</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>   
+
+      <div id="tab7" class="tab-content">
+        <div class="box">
+          <div class="input-pair">
+            <label for="fecha_l1_mcrpc">Fecha de inicio de la primera línea de tratamiento para mCRPC:</label>
+            <input type="date" name="fecha_l1_mcrpc" id="fecha_l1_mcrpc" required>
+          </div>
+
+          <div class="input-pair">
+            <label for="nombre_l1_mcrpc">Nombre de la primera línea de tratamiento para mCRPC:</label>
+            <input type="text" name="nombre_l1_mcrpc" id="nombre_l1_mcrpc">
+          </div>
+
+          <div class="input-pair">
+            <label for="l1_mcrpc">Clasificación de la primera línea para mCRPC:</label>
+            <select id="l1_mcrpc" name="l1_mcrpc">
+              <option value=""></option>
+              <option value="ADT">ADT</option>
+              <option value="Antiandrógenos">Antiandrógenos</option>
+              <option value="Quimioterapia">Quimioterapia</option>
+              <option value="Inhibidores de PARP">Inhibidores de PARP</option>
+              <option value="Radio-223">Radio-223</option>
+              <option value="Otro">Otro</option>>
+            </select>
+          </div>
+
+          <div class="radio-group">
+            <label for="recibio_2l">¿Recibió segunda línea?<span> *</span></label>
+            <div class="radio-options">
+              <input type="radio" id="recibio_2l1" name="recibio_2l" value="Si" required>
+              <label for="recibio_2l1">Sí</label>
+              <input type="radio" id="recibio_2l2" name="recibio_2l" value="No" required>
+              <label for="recibio_2l2">No</label>
+            </div>
+          </div>
+
+          <div class="mcrpc_2l">
+            <div class="input-pair">
+              <label for="fecha_l2_mcrpc">Fecha de inicio de la segunda línea de tratamiento para mCRPC:</label>
+              <input type="date" name="fecha_l2_mcrpc" id="fecha_l2_mcrpc">
+            </div>
+
+            <div class="input-pair">
+              <label for="nombre_l2_mcrpc">Nombre de la segunda línea de tratamiento para mCRPC:</label>
+              <input type="text" name="nombre_l2_mcrpc" id="nombre_l2_mcrpc">
+            </div>
+
+            <div class="input-pair">
+              <label for="l2_mcrpc">Clasificación de la segunda línea para mCRPC:</label>
+              <select id="l2_mcrpc" name="l2_mcrpc">
+                <option value=""></option>
+                <option value="ADT">ADT</option>
+                <option value="Antiandrógenos">Antiandrógenos</option>
+                <option value="Quimioterapia">Quimioterapia</option>
+                <option value="Inhibidores de PARP">Inhibidores de PARP</option>
+                <option value="Radio-223">Radio-223</option>
+                <option value="Otro">Otro</option>>
+              </select>
+            </div>
+
+            <div class="radio-group">
+              <label for="recibio_3l">¿Recibió tercera línea?<span> *</span></label>
+              <div class="radio-options">
+                <input type="radio" id="recibio_3l1" name="recibio_3l" value="Si">
+                <label for="recibio_3l1">Sí</label>
+                <input type="radio" id="recibio_3l2" name="recibio_3l" value="No">
+                <label for="recibio_3l2">No</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="mcrpc_3l">
+            <div class="input-pair">
+              <label for="fecha_l3_mcrpc">Fecha de inicio de la tercera línea de tratamiento para mCRPC:</label>
+              <input type="date" name="fecha_l3_mcrpc" id="fecha_l3_mcrpc">
+            </div>
+
+            <div class="input-pair">
+              <label for="nombre_l3_mcrpc">Nombre de la tercera línea de tratamiento para mCRPC:</label>
+              <input type="text" name="nombre_l3_mcrpc" id="nombre_l3_mcrpc">
+            </div>
+
+            <div class="input-pair">
+              <label for="l3_mcrpc">Clasificación de la tercera línea para mCRPC:</label>
+              <select id="l3_mcrpc" name="l3_mcrpc">
+                <option value=""></option>
+                <option value="ADT">ADT</option>
+                <option value="Antiandrógenos">Antiandrógenos</option>
+                <option value="Quimioterapia">Quimioterapia</option>
+                <option value="Inhibidores de PARP">Inhibidores de PARP</option>
+                <option value="Radio-223">Radio-223</option>
+                <option value="Otro">Otro</option>>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div id="tab8" class="tab-content">
+        <div class="box">
+          <div class="radio-group">
+            <label for="nmcrpc">¿Debutó como nmCRPC?<span> *</span></label>
+            <div class="radio-options">
+              <input type="radio" id="nmcrpc1" name="nmcrpc" value="Si" required>
+              <label for="nmcrpc1">Sí</label>
+              <input type="radio" id="nmcrpc2" name="nmcrpc" value="No" required>
+              <label for="nmcrpc2">No</label>
+            </div>
+          </div>
+
+          <div class="nmcrpc">
+            <div class="input-pair">
+              <label for="fecha_nmcrpc">Fecha de diagnóstico del nmCRPC:</label>
+              <input type="date" name="fecha_nmcrpc" id="fecha_nmcrpc">
+            </div>
+
+            <div class="input-pair">
+              <label for="ipsa_nmcrpc">PSA al diagnóstico del nmCRPC:</label>
+              <input type="number" name="ipsa_nmcrpc" id="ipsa_nmcrpc" value="" inputmode="numeric">
+            </div>
+
+            <div class="input-pair">
+              <label for="fecha_tto_nmcrpc">Fecha de inicio del primer tratamiento sistémico para nmCRPC:</label>
+              <input type="date" name="fecha_tto_nmcrpc" id="fecha_tto_nmcrpc">
+            </div>
+
+            <div class="input-pair">
+              <label for="fecha_prog_nmcrpc">Fecha de progresión de la enfermedad:</label>
+              <input type="date" name="fecha_prog_nmcrpc" id="fecha_prog_nmcrpc">
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div id="tab9" class="tab-content">
+        <div class="box">
+          <div class="input-pair">
+            <label for="consultas">Número de visitas ambulatorias al oncólogo luego del diagnóstico de enfermedad metástasica:</label>
+            <input type="number" name="consultas" id="consultas" value="" inputmode="numeric">
+          </div>
+
+          <div class="radio-group">
+            <label for="hosp">¿El paciente fue hospitalizado por cualquier razón o condición médica, independiente de la causa subyacente?</label>
+            <div class="radio-options" id="radio-hosp1">
+              <input type="radio" id="hosp1" name="hosp" value="Si">
+              <label for="hosp1" id="lbl-hosp1">Sí</label>
+              <input type="radio" id="hosp2" name="hosp" value="No">
+              <label for="hosp2" id="lbl-hosp2">No</label>
+            </div>
+          </div>
+
+          <div class="hospitalizacion">
+            <div class="input-pair">
+              <label for="causa_hosp">Causa de la hospitalización:</label>
+              <select id="causa_hosp" name="causa_hosp">
+                <option value=""></option>
+                <option value="Progresión">Progresión de la enfermedad</option>
+                <option value="Relacionado con el cáncer">Relacionado con el cáncer</option>
+                <option value="Toxicidad">Toxicidad</option>
+                <option value="Comorbilidad">Comorbilidad</option>
+                <option value="Cirugía electiva">Cirugía electiva</option>
+                <option value="Dolor">Dolor</option>
+                <option value="Otro">Otro</option>>
+              </select>
+            </div>
+
+            <div class="input-pair">
+              <label for="num_hosp">Número de hospitalizaciones:</label>
+              <input type="number" name="num_hosp" id="num_hosp" value="" inputmode="numeric">
+            </div>
+          </div>
+
+          <div class="radio-group">
+            <label for="fx">¿El paciente tuvo fracturas patológicas?</label>
+            <div class="radio-options">
+              <input type="radio" id="fx1" name="fx" value="Si">
+              <label for="fx1">Sí</label>
+              <input type="radio" id="fx2" name="fx" value="No">
+              <label for="fx2">No</label>
+            </div>
+          </div>
+
+          <div class="fracturas">
+            <div class="input-pair">
+              <label for="num_fx">Número de fracturas patológicas:</label>
+              <input type="number" name="num_fx" id="num_fx" value="" inputmode="numeric">
+            </div>
+
+            <div class="radio-group">
+              <label for="fx_cx">¿El paciente requirió cirugía para el manejo de las fracturas patológicas?</label>
+              <div class="radio-options">
+                <input type="radio" id="fx_cx1" name="fx_cx" value="Si">
+                <label for="fx_cx1">Sí</label>
+                <input type="radio" id="fx_cx2" name="fx_cx" value="No">
+                <label for="fx_cx2">No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   
+
+      <div id="tab10" class="tab-content">
+        <div class="box">
+          <div class="radio-group">
+            <label for="rxtx_paliativa">¿El paciente recibió radioterapia paliativa?</label>
+            <div class="radio-options">
+              <input type="radio" id="rxtx_paliativa1" name="rxtx_paliativa" value="Si">
+              <label for="rxtx_paliativa1">Sí</label>
+              <input type="radio" id="rxtx_paliativa2" name="rxtx_paliativa" value="No">
+              <label for="rxtx_paliativa2">No</label>
+            </div>
+          </div>
+
+          <div class="input-pair" id="radioterapia">
+            <label for="cursos">Número de cursos de radioterapia paliativa:</label>
+            <input type="number" name="cursos" id="cursos" value="" inputmode="numeric">
+          </div>
+
+          <div class="radio-group">
+            <label for="esp_dolor">¿El paciente requirió tratamiento por un especialista en dolor?</label>
+            <div class="radio-options">
+              <input type="radio" id="esp_dolor1" name="esp_dolor" value="Si">
+              <label for="esp_dolor1">Sí</label>
+              <input type="radio" id="esp_dolor2" name="esp_dolor" value="No">
+              <label for="esp_dolor2">No</label>
+            </div>
+          </div>
+
+          <div class="input-pair" id="dolor">
+            <label for="num_consultas_dolor">Número de consultas con el especialista en dolor:</label>
+            <input type="number" name="num_consultas_dolor" id="num_consultas_dolor" value="" inputmode="numeric">
+          </div>
+
+          <div class="radio-group">
+            <label for="er">¿El paciente fue ingresado a urgencias por cualquier razón o condición médica, independiente de la causa subyacente?</label>
+            <div class="radio-options" id="radio-hosp2">
+              <input type="radio" id="er1" name="er" value="Si">
+              <label for="er1">Sí</label>
+              <input type="radio" id="er2" name="er" value="No">
+              <label for="er2">No</label>
+            </div>
+          </div>
+
+          <div class="urgencias">
+            <div class="input-pair">
+              <label for="causa_er">Causa de la visita al servicio de urgencias:</label>
+              <select id="causa_er" name="causa_er">
+                <option value=""></option>
+                <option value="Progresión">Progresión de la enfermedad</option>
+                <option value="Relacionado con el cáncer">Relacionado con el cáncer</option>
+                <option value="Toxicidad">Toxicidad</option>
+                <option value="Comorbilidad">Comorbilidad</option>
+                <option value="Cirugía electiva">Cirugía electiva</option>
+                <option value="Dolor">Dolor</option>
+                <option value="Otro">Otro</option>>
+              </select>
+            </div>
+
+            <div class="input-pair">
+              <label for="num_er">Número de visitas al servicio de urgencias:</label>
+              <input type="number" name="num_er" id="num_er" value="" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab11" class="tab-content">
+        <div class="box">
+          <div class="input-pair">
+            <label for="mhspc2mcrpc">¿Cómo se documentó la progresión de mHSPC a mCRPC?</label>
+            <select id="mhspc2mcrpc" name="mhspc2mcrpc">
+              <option value=""></option>
+              <option value="Progresión clínica">Progresión clínica</option>
+              <option value="Progresión serológica">Progresión serológica</option>
+              <option value="Progresión radiográfica">Progresión radiográfica</option>
+              <option value="≥2">≥2 opciones previas</option>
+              <option value="Desconocido">Desconocido</option>
+              <option value="No aplica">No aplica</option>
+            </select>
+          </div>
+
+          <div class="input-pair" id="fechaProgresion">
+            <label for="fecha_prog_mhspc">Fecha de progresión de mHSPC a mCRPC:</label>
+            <input type="date" name="fecha_prog_mhspc" id="fecha_prog_mhspc">
+          </div>
+
+          <div class="radio-group">
+            <label for="prog_l1">¿Hubo progresión a la primera línea de tratamiento en mCRPC?<span> *</span></label>
+            <div class="radio-options">
+              <input type="radio" id="prog_l1_1" name="prog_l1" value="Si">
+              <label for="prog_l1_1">Sí</label>
+              <input type="radio" id="prog_l1_2" name="prog_l1" value="No">
+              <label for="prog_l1_2">No</label>
+            </div>
+          </div>
+
+          <div class="prog1">
+            <div class="input-pair">
+              <label for="fecha_prog_l1">Fecha de progresión a la primera línea de tratamiento:</label>
+              <input type="date" name="fecha_prog_l1" id="fecha_prog_l1">
+            </div>
+
+            <div class="radio-group">
+              <label for="prog_l2">¿Hubo progresión a la segunda línea de tratamiento en mCRPC?<span> *</span></label>
+              <div class="radio-options">
+                <input type="radio" id="prog_l2_1" name="prog_l2" value="Si">
+                <label for="prog_l2_1">Sí</label>
+                <input type="radio" id="prog_l2_2" name="prog_l2" value="No">
+                <label for="prog_l2_2">No</label>
+              </div>
+            </div>
+
+            <div class="prog2">
+              <div class="input-pair">
+                <label for="fecha_prog_l2">Fecha de progresión a la segunda línea de tratamiento:</label>
+                <input type="date" name="fecha_prog_l2" id="fecha_prog_l2">
+              </div>
+
+              <div class="radio-group">
+                <label for="prog_l3">¿Hubo progresión a la tercera línea de tratamiento en mCRPC?<span> *</span></label>
+                <div class="radio-options">
+                  <input type="radio" id="prog_l3_1" name="prog_l3" value="Si">
+                  <label for="prog_l3_1">Sí</label>
+                  <input type="radio" id="prog_l3_2" name="prog_l3" value="No">
+                  <label for="prog_l3_2">No</label>
+                </div>
+              </div>
+
+              <div class="input-pair" id="prog3">
+                <label for="fecha_prog_l3">Fecha de progresión a la tercera línea de tratamiento:</label>
+                <input type="date" name="fecha_prog_l3" id="fecha_prog_l3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div id="tab12" class="tab-content">
+        <div class="box">
+          <div class="input-pair">
+            <label for="fecha_last_followup">Fecha del último seguimiento o último contacto reportado en la historia clínica:</label>
+            <input type="date" name="fecha_last_followup" id="fecha_last_followup" required>
+          </div>
+
+          <div class="input-pair">
+            <label for="estado_vital">Estado vital al último contacto:</label>
+            <select id="estado_vital" name="estado_vital">
+              <option value=""></option>
+              <option value="Muerto">Muerto</option>
+              <option value="Vivo">Vivo</option>
+              <option value="Perdido de seguimiento">Perdido de seguimiento</option>
+            </select>
+          </div>
+
+          <div class="input-pair" id="fechaMuerte">
+            <label for="fecha_muerte">Fecha de muerte según documento fuente:</label>
+            <input type="date" name="fecha_muerte" id="fecha_muerte">
+          </div>
+
+          <div class="input-pair">
+            <label for="observaciones">Observaciones:</label>
+            <input type="text" name="observaciones" id="observaciones">
+          </div>
+        </div>
+      </div>
+      
+      <div id="tab13" class="tab-content">
+        <div class="box">
+          <div class="input-pair">
+            <label for="diligenciador">Nombre de quien diligencia:</label>
+            <input type="text" name="diligenciador" id="diligenciador" required>
+          </div>
+
+          <div class="input-pair">
+            <label for="sitio">Nombre del sitio:</label>
+            <select id="sitio" name="sitio" required>
+              <option value=""></option>
+              <option value="Clínica Universitaria Colombia">Clínica Universitaria Colombia</option>
+              <option value="Fundación Valle de Lili">Fundación Valle de Lili</option>
+              <option value="Clínica Portoazul">Clínica Portoazul</option>
+              <option value="Clínica Las Américas AUNA">Clínica Las Américas AUNA</option>
+              <option value="Clínica de Oncología Astorga">Clínica de Oncología Astorga</option>
+              <option value="SOHEC">SOHEC</option>
+            </select>
+          </div>
+
+          <div class="input-pair">
+            <label for="fecha_datos">Fecha de ingreso de los datos:</label>
+            <input type="date" name="fecha_datos" id="fecha_datos" required>
+          </div>
+        </div>
+
+        <div class="btn-box">
+          <button id="save">Guardar Datos</button>
+          <button id="excel">Abrir excel</button>
+        </div>
+
+      </div>
+    </form>
+    <script src="renderer.js"></script>
+  </body>
+</html>
